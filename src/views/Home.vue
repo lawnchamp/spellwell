@@ -1,17 +1,17 @@
 <template>
   <div class="home">
-    <SpellingInput/>
+    <WordInput/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import SpellingInput from "@/components/SpellingInput.vue";
+import WordInput from '@/components/WordInput.vue'
 
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    SpellingInput
-  }
-};
+    WordInput,
+  },
+}
 </script>
