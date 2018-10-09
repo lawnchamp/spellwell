@@ -1,13 +1,14 @@
 <template>
   <div>
     <div>
-      <input v-model="newWord.word" placeholder="Add Word">
+      <input v-model="newWord.word" placeholder="Word">
+      <input v-model="newWord.definition" placeholder="Definition">
+      <button @click="addWord">Add Word</button>
     </div>
-    <div>
-      <textarea v-model="newWord.definition" placeholder="Add definition here"></textarea>
-    </div>
-    <button @click="addWord">Add Word</button>
-    {{this.$store.getters.words}}
+    <br>
+    <li v-for="{word, definition} in this.words" :key="word">
+      <ul><strong>{{word}}: </strong>{{definition}}</ul>
+    </li>
   </div>
 </template>
 
@@ -20,6 +21,7 @@ export default {
         word: '',
         definition: '',
       },
+      words: this.$store.getters.words,
     }
   },
   methods: {
