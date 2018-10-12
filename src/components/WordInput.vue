@@ -2,7 +2,7 @@
   <div>
     <div>
       <input v-model="newWord.word" placeholder="Word">
-      <input v-model="newWord.definition" placeholder="Definition">
+      <input v-model="newWord.definition" placeholder="Definition halla at ya">
       <button @click="addWord">Add Word</button>
     </div>
     <br>
